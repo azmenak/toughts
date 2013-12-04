@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %title {{page.title}}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+
+    / build:css({app,.tmp}) /assets/css.screen.css
+    %link{rel: "stylesheet", href: "/assets/css/screen.css"}
+    / endbuild
+
+    / build:js({app,.tmp,_bower_comonents}) /assets/header.js
+    %script{src: "/modernizr/modernizr.js"}
+    / endbuild
+
+  %body
+    #main
+      .row
+        .medium-4.columns
+          %header
+            %h1.tagline {{site.name}}
+
+        .medium-8.columns
+          #content
+            {{ content }}
+          
+
+    / build:js({app,.tmp,_bower_components}) /assets/javascripts.js
+
+    -# %script{src: "/jquery/jquery.js"}
+    -# %script{src: "/foundation/js/vendor/fastclick.js"}
+
+    %script{src: "/assets/javascript/main.js"}
+    %script{src: "/assets/javascript/ga.js"}
+    / endbuild

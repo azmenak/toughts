@@ -1,0 +1,8 @@
+{
+  "name": "toughts",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "foundation": "~5.0.2"
+  }
+}
